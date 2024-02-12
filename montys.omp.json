@@ -1,0 +1,67 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "var": {
+    "Welcome": "Welcome to my Terminal 😂",
+    "Name": "SRIN VICHEA"
+  },
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "#003543",
+          "foreground": "#00c983",
+          "leading_diamond": "\ue0b6",
+          "style": "diamond",
+          "template": "{{ .Var.Welcome }}",
+          "type": "os"
+        },
+        {
+          "background": "#DA627D",
+          "foreground": "#ffffff",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "folder_icon": "🏠",
+            "folder_separator_icon": "\\",
+            "home_icon": "🏠",
+            "style": "full"
+          },
+          "style": "powerline",
+          "template": " <#000>\uf07b \uea9c</> {{ .Path }} ",
+          "type": "path"
+        },
+
+        {
+          "background": "#76b367",
+          "foreground": "#ffffff",
+          "powerline_symbol": "\ue0b0",
+          "style": "powerline",
+          "template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+          "type": "node"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#cd5e42",
+          "style": "plain",
+          "template": "\ue3bf ",
+          "type": "root"
+        },
+        {
+          "foreground": "#CD4277",
+          "style": "plain",
+          "template": " <#45F1C2><b>\u26a1</b></><i>{{ .Var.Name }}</i> <#26C6DA>\u276f</><#45F1C2>\u276f</>",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 2
+}
